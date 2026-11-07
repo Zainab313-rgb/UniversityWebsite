@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Northbridge University</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Northbridge University</h1>
+    <p>Learn. Grow. Lead.</p>
+  </header>
+
+  <!-- Navigation menu -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#departments">Departments</a>
+    <a href="#programs">Programs</a>
+    <a href="#admission">Admission</a>
+  </nav>
+
+  <!-- Home section with background image -->
+  <section id="home" class="hero">
+    <h2>Welcome to Northbridge University</h2>
+    <p>A place where students learn, grow and become leaders.</p>
+    <button onclick="showWelcome()">Click for Welcome Message</button>
+    <p id="message"></p>
+  </section>
+
+  <!-- About section -->
+  <section id="about" class="content">
+    <h2>About Us</h2>
+    <img src="images/building.jpg" alt="University main building" class="photo-right">
+    <p>Northbridge University was founded in 1985. Today we have more than 5,000 students and 300 teachers. We have modern labs, a big library and a green campus.</p>
+    <p>Our aim is to give every student a good education and help them build a bright future.</p>
+  </section>
+
+  <!-- Departments section -->
+  <section id="departments" class="content">
+    <h2>Our Departments</h2>
+    <img src="images/library.jpg" alt="University library" class="photo-left">
+    <ul>
+      <li>Department of Computer Science</li>
+      <li>Department of Business Administration</li>
+      <li>Department of Engineering</li>
+      <li>Department of Social Sciences</li>
+      <li>Department of Mathematics</li>
+      <li>Department of English</li>
+    </ul>
+  </section>
+
+  <!-- Programs section -->
+  <section id="programs" class="content">
+    <h2>Academic Programs</h2>
+ <table>
+  <tr>
+    <th>Program</th>
+    <th>Duration</th>
+    <th>Degree Title</th>
+  </tr>
+  <tr>
+    <td>Computer Science</td>
+    <td>4 Years</td>
+    <td>BS Computer Science</td>
+  </tr>
+  <tr>
+    <td>Business Administration</td>
+    <td>4 Years</td>
+    <td>BBA</td>
+  </tr>
+  <tr>
+    <td>Electrical Engineering</td>
+    <td>4 Years</td>
+    <td>BE Electrical Engineering</td>
+  </tr>
+  <tr>
+    <td>Mathematics</td>
+    <td>2 Years</td>
+    <td>MSc Mathematics</td>
+  </tr>
+  <tr>
+    <td>Software Engineering</td>
+    <td>4 Years</td>
+    <td>BS Software Engineering</td>
+  </tr>
+  <tr>
+    <td>Artificial Intelligence</td>
+    <td>4 Years</td>
+    <td>BS Artificial Intelligence</td>
+  </tr>
+</table>
+</section>
+
+  <!-- Admission form -->
+  <section id="admission" class="content">
+    <h2>Admission Inquiry Form</h2>
+    <form onsubmit="return thankYou()">
+      <label>Name:</label>
+      <input type="text" id="name" required>
+
+      <label>Email:</label>
+      <input type="email" id="email" required>
+
+      <label>Contact Number:</label>
+      <input type="text" id="phone" required>
+
+      <label>Gender:</label>
+      <input type="radio" name="gender" value="Male"> Male
+      <input type="radio" name="gender" value="Female"> Female
+
+      
+    <label>Select Program:</label>
+    <select id="program">
+  <option>Computer Science</option>
+  <option>Business Administration</option>
+  <option>Electrical Engineering</option>
+  <option>Mathematics</option>
+  <option>Software Engineering</option>
+  <option>Artificial Intelligence</option>
+</select>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Northbridge University, 123 University Road, Karachi</p>
+    <p>Email: info@northbridge.edu | Phone: 021-1234567</p>
+    <p>&copy; 2026 Northbridge University</p>
+  </footer>
+
+  <script>
+    // This function runs when the welcome button is clicked
+function showWelcome() {
+  document.getElementById("message").innerHTML = "Welcome to Northbridge University! We are happy to have you here.";
+  alert("Welcome to Northbridge University!");
+}
+
+// This function runs when the form is submitted
+function thankYou() {
+  var name = document.getElementById("name").value;
+  alert("Thank you, " + name + "! Your inquiry has been submitted.");
+  return false; // stops the page from reloading
+}
+  </script>
+</body>
+</html>
